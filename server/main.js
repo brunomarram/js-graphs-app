@@ -27,7 +27,7 @@ Meteor.startup(() => {
         const graph = _readGraph("grafos/grafo1.txt");
         const source = graph.getNode("1");
         const target = graph.getNode("4");
-        console.log(graph.getMinimumPath(source, target));
+        console.log(graph.isEurelian());
     } catch (e) {
         console.log("Error:", e.stack);
     }
