@@ -28,6 +28,7 @@ Meteor.startup(() => {
         const source = graph.getNode("1");
         const target = graph.getNode("4");
         console.log(graph.isEurelian());
+        console.log(`Teste do ${graph.numberOfRelatedComponents()} `);
     } catch (e) {
         console.log("Error:", e.stack);
     }
