@@ -24,7 +24,7 @@ const _readGraph = (file) => {
 
 Meteor.startup(() => {
     try {
-        const graph = _readGraph("grafos/grafo1.txt");
+        const graph = _readGraph("grafos/war.txt");
         //console.log(graph);
         //graph.addNode("10", 10);
         //graph.addNode("20", 20);
