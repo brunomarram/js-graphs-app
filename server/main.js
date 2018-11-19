@@ -25,9 +25,14 @@ const _readGraph = (file) => {
 Meteor.startup(() => {
     try {
         const graph = _readGraph("grafos/grafo1.txt");
-        const source = graph.getNode("1");
-        const target = graph.getNode("4");
-        console.log(graph.isEurelian());
+        //console.log(graph);
+        //graph.addNode("10", 10);
+        //graph.addNode("20", 20);
+        //graph.addEdge(graph.getNode("10"), graph.getNode("1"), 30);
+
+        //const source = graph.getNode("5");
+        // const target = graph.getNode("4");
+        console.log(graph.getMinimumGeneratingTree());
     } catch (e) {
         console.log("Error:", e.stack);
     }
