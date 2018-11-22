@@ -1,8 +1,6 @@
 import { Meteor } from "meteor/meteor";
 import Graphs from "meteor/brunomarram:js-graphs";
 
-const fs = require("fs");
-
 const _readGraph = (file) => {
     const graph = new Graphs.Graphs("Grafo 01");
     const textFile = Assets.getText(file);
@@ -24,12 +22,10 @@ const _readGraph = (file) => {
 
 Meteor.startup(() => {
     try {
-        const graph = _readGraph("grafos/war.txt");
+        const graph = _readGraph("grafos/grafoApresentacao1.txt");
         //console.log(graph);
         //graph.addNode("10", 10);
         //graph.addNode("20", 20);
-        //graph.addEdge(graph.getNode("10"), graph.getNode("1"), 30);
-
         //const source = graph.getNode("5");
         // const target = graph.getNode("4");
         console.log(graph.getMinimumGeneratingTree());
